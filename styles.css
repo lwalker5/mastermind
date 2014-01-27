@@ -1,0 +1,339 @@
+@charset "UTF-8";
+body {
+	font: 62.5% Verdana, Arial, Helvetica, sans-serif;
+	line-height: 1.4;
+	background: #204D51;
+	margin: 0;
+	padding: 0;
+	color: #FFF;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0px;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 0px;
+	padding-left: 0px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+
+.background {
+	width: 768px;
+	height: 1004px;
+	margin: 0 auto;
+	background-color:#30261C;
+	background-image:url(assets/backtex.png);
+	background-size: 768px 1004px;
+	overflow: hidden;
+}
+
+
+.wrapper {
+	width:100%;
+	height:auto;
+	margin-left: 5.5em;
+	padding-top: 2.5em;
+	display: block;
+}
+
+.title{
+	font-family:'rondaloregular';
+	color: #0B666F;
+	text-transform: uppercase;
+	font-size: 7.5em;
+	font-weight: normal;
+	display: block;
+	opacity: 0.7;
+	text-shadow: 1px 1px 9px #204D51;
+}
+
+.heading {
+	font-family: 'moireregular';
+	font-size: 2.7em;
+	color: #0B666F;
+	font-weight: normal;
+	display: block;
+	opacity: 0.8;
+	text-shadow: 1px 1px 9px #204D51;
+}
+
+.button:hover{
+	opacity: 1;
+	cursor: pointer;
+}
+
+.bodytext{
+	font-family: 'moireregular';
+	font-size: 1.45em;
+	color: #8C8C8C;
+}
+
+#instruct_canvas {
+	display: inline-block;
+	margin-top: 0.5em;
+}
+
+#instruct {
+	display: inline-block;
+	vertical-align: top;
+	width: 8em;
+	margin-top: 0.5em;
+}
+
+.instruct_text {
+	display: inline-block;
+	font-size: 0.9em;
+	margin-bottom: 1.5em;
+}
+
+.bottom-margin {
+	margin-bottom: 1em;
+}
+
+.border{
+	height:13px;
+	width:44%;
+	background-image:url(assets/border.png);
+	margin-left: -5.5em;
+}
+
+.decoration {
+	height: 13px;
+	margin-top: 2em;
+}
+
+.music{
+	height:75px;
+	width:300px;
+	margin-top: 25px;
+}
+
+#arrow {
+	margin-left: -5.5em;
+	position: relative;
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+}
+
+
+.left{
+	margin-left:2em;
+	width:366px;
+	height:825px;
+	display: inline-block;
+}
+
+.mid{
+	width:50px;
+	height:750px;
+}
+ 
+.right{
+/*93*/
+	margin-top: 3.5em;
+	vertical-align: top;
+	display: inline-block;
+	width:263px;
+	height:675px;
+}
+
+.code{
+	width:auto;
+	height:5em;
+	margin: 2em 0 2em -0.5em;
+}
+
+.board{
+	width:245px;
+	display: inline-block;
+}
+
+.row{
+	width:300px;
+	height:50px;
+}
+
+.space{
+	height:auto;
+	display: table-cell;
+	/*background-image:url(assets/blankspace.png)*/;
+}
+
+.ok.on:hover {
+	cursor: pointer;
+}
+
+.results.easy {
+	width: 50px;
+	height:635px;
+	margin-bottom:10px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.results.difficult{
+	width: 75px !important;
+}
+
+.rowresult{
+	padding-top: 5px;
+	height:30px;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	float:left;
+}
+
+.rowresult11{
+	width:40px;
+	height:30px;
+	margin-bottom: 15px;
+	float:left;
+}
+
+
+.resultpeg{
+	width:20px;
+	height:15px;
+	/*background-image:url(assets/resultpeg.png);*/
+	float:left;
+}
+
+#pegs{
+	width:250px;
+	height:50px;
+}
+
+#pegs img:hover {
+	cursor: pointer;
+}
+
+
+.levels{
+	width:100px;
+	margin-top:1em;
+	display: inline-block;
+
+}
+
+.difficulty {
+	font-family: 'moireregular';
+	font-size: 2em;
+	color: #8C8C8C;
+	line-height: 1.6em;
+}
+
+.difficulty:hover, .difficulty.selected {
+	color: #0B666F;
+	cursor: pointer;
+	text-shadow: 1px 1px 9px #204D51;
+}
+
+.difficultypegs{
+	vertical-align: top;
+	margin-top:1em;
+	display: inline-block;
+}
+
+.difficultypegs img {
+	display: block;
+	margin-bottom: 0.9em;
+}
+
+a:link, a:visited{
+	color: #CCCCCC;
+	text-decoration: none;
+}
+
+
+a:hover, a:active, a:focus{
+	color: #0B666F;
+	text-decoration:none;
+	opacity: 1.0;
+}
+
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the overflow:hidden on the .container is removed */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+
+.difficultyselected{
+	font-family: 'moireregular';
+	font-size:20px;
+	opacity:0.75;
+	color: #0B666F;
+}
+
+.difficultytext{
+	font-family: 'moireregular';
+	font-size:20px;
+	opacity:0.55;
+}
+
+/*Fonts*/
+
+@font-face {
+    font-family: 'rondaloregular';
+    src: url('assets/fonts/rondalo_-webfont.eot');
+    src: url('assets/fonts/rondalo_-webfont.eot?#iefix') format('embedded-opentype'),
+         url('assets/fonts/rondalo_-webfont.woff') format('woff'),
+         url('assets/fonts/rondalo_-webfont.ttf') format('truetype'),
+         url('assets/fonts/rondalo_-webfont.svg#rondaloregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'moireregular';
+    src: url('assets/fonts/moire-regular-webfont.eot');
+    src: url('assets/fonts/moire-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('assets/fonts/moire-regular-webfont.woff') format('woff'),
+         url('assets/fonts/moire-regular-webfont.ttf') format('truetype'),
+         url('assets/fonts/moire-regular-webfont.svg#moireregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'moirebold';
+    src: url('moire-bold-webfont.eot');
+    src: url('moire-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('moire-bold-webfont.woff') format('woff'),
+         url('moire-bold-webfont.ttf') format('truetype'),
+         url('moire-bold-webfont.svg#moirebold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'moire_lightregular';
+    src: url('moire-light-webfont.eot');
+    src: url('moire-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('moire-light-webfont.woff') format('woff'),
+         url('moire-light-webfont.ttf') format('truetype'),
+         url('moire-light-webfont.svg#moire_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

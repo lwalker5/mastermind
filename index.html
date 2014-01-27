@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!--<meta name="apple-mobile-web-app-capable" content="yes"/>-->
+<meta name="viewport" content="width=device-width"/>
+<title>Mastermind</title>
+
+<link href="styles.css" rel="stylesheet" type="text/css" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png"/>
+
+<script src="assets/jquery-1.10.2.min.js"></script>
+<script src="play.js" type="text/javascript"></script>
+<script src="start.js" type="text/javascript"></script>
+
+
+</head>
+
+<body>
+<div class = "background">
+    <div class="wrapper">
+        <span class="title">Mastermind</span>
+        <div class = "border"></div>
+        <div id="arrow"><img src="assets/arrow.png"/></div>
+        <div class = "left">
+            <div class = "code" id = "codeId" data-code-length='4' data-difficulty="easy"></div>
+        	<div class="board" id="boardId" data-current-row="11" data-current-spot="0"></div>
+        	<div class="results easy" id = "resultId"></div>
+        	<div id = "pegs" data-active="true">
+                <div class="row">
+                    <div class="space choice"><img id='pink'/></div>
+                    <div class="space choice"><img id='orange'/></div>
+                    <div class="space choice"><img id='yellow'/></div>
+                    <div class="space choice"><img id='green'/></div>
+                    <div class="space choice"><img id='backarrow'/></div>
+                </div>
+                <div class="row">
+                    <div class="space choice"><img id='blue'/></div>
+                    <div class="space choice"><img id='indigo'/></div>
+                    <div class="space choice"><img id='purple'/></div>
+                    <div class="space choice"><img id='grey'/></div>
+                    <div class="space choice"><img id='giveup' src="assets/giveupeasy.png"/></div>
+                </div>
+        	</div>
+        </div>
+        <div class = "right">
+        	<span class="heading bottom-margin">Instructions</span>
+            <span class="bodytext">
+                <p>Crack the color code set by the evil computer</p>
+                <p>Each row is a guess</p>
+                <p>Pegs on the right show results</p>
+                <canvas id = "instruct_canvas" width ="100px" height = "105px"></canvas>
+                <div id = "instruct">
+                    <div class= "instruct_text">
+                        correct spot
+                        incorrect color
+                    </div>
+                    <div class="instruct_text">
+                        correct color
+                        correct spot
+                    </div>
+                </div>
+                <p>Pegs are in general, not in order</p>
+                <p>Good luck!</p>
+            </span>
+            <span class="heading button bottom-margin" id="new_game">New Game</span>
+            <span class="heading">Feeling Brave?</span>
+            <span class="bodytext"><p>Up the number of pegs in the code for a challenge</p></span>
+
+            <!--easy-->
+            <div class = "levels" id="level_select">
+                <span id="easy" class = "difficulty selected">Easy</span>
+                <span id="medium" class = "difficulty">Medium</span>
+                <span id="hard" class = "difficulty">Hard</span>
+            </div>
+            <div class = "difficultypegs">
+                <img src="assets/easypegs.png"/>
+                <img src="assets/mediumpegs.png"/>
+                <img src="assets/hardpegs.png"/>
+            </div>
+            <img class = "decoration" src="assets/border.png"/>
+            <div class = "music">
+                <iframe src="https://embed.spotify.com/?uri=spotify:trackset:Mastermind Mix:3SL3UavpjRKNMM9UVlE9Bx,6syl6QdqpSLgzHIPE6P05A,50CgC2wKmbWm4WLQKY87oP,4dzXMaG0Ekd4SF1EDbKQCe,1bxXbXmx4IUrjeMCQDamPR,4Avmwk0zHFNt62NhAGRjGO" width="285" height="80" frameborder="0" allowtransparency="true"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
